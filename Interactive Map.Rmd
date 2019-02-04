@@ -1,0 +1,20 @@
+---
+title: "R Markdown and Leaflet"
+author: "Anindito De"
+date: "4 February 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+```
+
+## R Interactive Map
+```{r Interactive Map}
+my_map <- leaflet() %>%
+    addTiles() %>%
+    addCircleMarkers (lat = 38.897935, lng = -77.036476, popup = "American President")
+
+my_map
+```
